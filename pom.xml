@@ -51,6 +51,11 @@
          <groupId>mysql</groupId>
          <artifactId>mysql-connector-java</artifactId>
      </dependency>
+    <dependency>
+        <groupId>com.oracle</groupId>
+        <artifactId>ojdbc7</artifactId>
+        <version>12.1.0.1</version>
+    </dependency>
      <!--Json Support-->
      <dependency>
          <groupId>com.alibaba</groupId>
@@ -69,11 +74,20 @@
 	    <artifactId>pagehelper</artifactId>
 	    <version>4.1.6</version>
 	</dependency>
+
 </dependencies>
-  
-<!-- Package as an executable JAR -->  
-<build>  
-    <plugins>  
+
+<!-- Package as an executable JAR -->
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+        </resources>
+    <plugins>
         <plugin>  
             <groupId>org.springframework.boot</groupId>  
             <artifactId>spring-boot-maven-plugin</artifactId>  

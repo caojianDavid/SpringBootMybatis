@@ -3,7 +3,7 @@
 <mapper namespace="com.cj.dao.UserMapper">
  
   <select id="findUserInfo" resultType="com.cj.po.User">
-    select id,name, age,password from user
+    select "id","name", "age","password" from "USER"
   </select>
  
 </mapper>

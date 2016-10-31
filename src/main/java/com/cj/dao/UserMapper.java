@@ -10,8 +10,8 @@ import com.cj.po.User;
 
 
 public interface UserMapper {
-	public List<User> findUserInfo();
+	 List<User> findUserInfo();
 
-	@Select("select id,name, age,password from user WHERE id = #{id}")
-	public User findUserInfoById(@Param("id") Long id);
+	@Select("select \"id\",\"name\", \"age\",\"password\" from \"USER\" WHERE id = #{id}")
+	 User findUserInfoById(@Param("id") Long id);
 }

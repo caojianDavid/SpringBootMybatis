@@ -32,7 +32,7 @@ public class UserService {
 	@SuppressWarnings("rawtypes")
 	public Page getUserInfoByPage() {
 		// 获取第1页，10条内容，默认查询总数count
-		PageHelper.startPage(1, 10);
+		PageHelper.startPage(1, 5);
 		List<User> list = userMapper.findUserInfo();
 		System.out.println(list.get(0).getId());
 	    System.out.println(list.size());
